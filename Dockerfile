@@ -15,7 +15,8 @@ RUN apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0x5a16e728
   cd hhvm-pgsql && \
   hphpize && \
   cmake . && \
-  make
+  make && \
+  apt-get clean
 
 # hhvm.dynamic_extension_path = /path/to/hhvm/extensions
 # hhvm.dynamic_extensions[pgsql] = pgsql.so
